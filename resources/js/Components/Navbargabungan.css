@@ -1,0 +1,171 @@
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 0.5rem 1rem;
+}
+
+.brand-text {
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #374151 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 0.25rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #1a1a1a;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #1a1a1a !important;
+    transform: translateY(-1px);
+}
+
+.custom-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #1a1a1a;
+}
+
+.custom-btn:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn-cart {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: #1a1a1a;
+    color: white;
+}
+
+.custom-btn-cart:hover {
+    background: #2d2d2d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* Perbaikan tata letak navbar */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons {
+        margin-top: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 0.75rem !important;
+    }
+
+    .custom-btn,
+    .custom-btn-cart {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+}
+
+/* Hover animations */
+.navbar-brand {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.02);
+}
+
+/* Tambahan efek visual */
+.custom-btn i,
+.custom-btn-cart i {
+    transition: transform 0.3s ease;
+}
+
+.custom-btn:hover i,
+.custom-btn-cart:hover i {
+    transform: translateX(2px);
+}
+
+/* Efek aktif untuk navigasi */
+.nav-link.active {
+    font-weight: 600;
+}
+
+.cart-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-body .btn {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-body .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modal-body small {
+    font-size: 0.85rem;
+}

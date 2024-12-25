@@ -1,0 +1,3 @@
+interface Routes {
+    'about': undefined;
+} 
